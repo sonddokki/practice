@@ -147,12 +147,31 @@ GROUP BY department_id;
 --문제8.
 --직원 입사일이 11번째에서 15번째의 직원의 사번, 이름, 급여, 입사일을 입사일 순서로 출력하세요
 
-SELECT
-    *
-FROM employees;
+SELECT em.employee_id
+    
+FROM employees em, (SELECT  rownum rn
+                            ,emp.employee_id "empid"
+                            ,emp.hire_date    
+                    FROM (SELECT  employee_id
+                                  ,hire_date
+                          FROM employees
+                          ORDER BY hire_date asc) emp) emprn
+WHERE em.employee_id = emprn.emp.employee_id;
 
 
-SELECT hire_date
+
+
+SELECT  rownum rn
+        ,emp.employee_id  "empid"
+        ,emp.hire_date    
+FROM (SELECT  employee_id
+              ,hire_date
+      FROM employees
+      ORDER BY hire_date asc) emp;
+
+
+SELECT  employee_id
+        ,hire_date
 FROM employees
 ORDER BY hire_date asc;
 
