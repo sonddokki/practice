@@ -97,11 +97,31 @@ WHERE author_name = '기안84' ;
 DELETE FROM book 
 WHERE author_id = 4 ;  
 
+--===============================================================================================
 
+UPDATE book
+set title = '삼국지 (상)'
+where title = '삼국지';   
 
+SELECT  book_id
+        ,title
+        ,pubs
+        ,pub_date
+        ,author_id
+FROM book;
 
 SELECT   author_id
         ,author_name
         ,author_desc
 FROM author; 
+
+
+SELECT  b.book_id
+        ,b.title
+        ,b.pubs
+        ,b.pub_date
+        ,b.author_id
+        ,a.author_name    
+FROM book b, author a
+WHERE b.author_id = a.author_id;
                 
