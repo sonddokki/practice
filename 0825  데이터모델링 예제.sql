@@ -96,4 +96,12 @@ WHERE author_name = '기안84' ;
 -- 참조하는 테이블에 공유되는 칼럼의 값이 있는 데이터를 모두 삭제하면 기안84 삭제 가능!
 DELETE FROM book 
 WHERE author_id = 4 ;  
+
+
+
+
+SELECT   author_id
+        ,author_name
+        ,author_desc
+FROM author; 
                 
