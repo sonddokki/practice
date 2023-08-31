@@ -124,4 +124,14 @@ SELECT  b.book_id
         ,a.author_name    
 FROM book b, author a
 WHERE b.author_id = a.author_id;
+
+
+UPDATE book
+set author_id = 8
+where title = '사국지' ;
+            
+-- 책삭제                
+DELETE FROM book 
+WHERE book_id = 2 ;            
+                
                 
