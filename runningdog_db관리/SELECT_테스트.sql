@@ -11,7 +11,7 @@ SELECT * FROM dog;
 
 
 -- 산책로 불러오는 쿼리문 
-SELECT  co.coordno coordno--좌표번호
+SELECT  co.coordno --좌표번호
         ,tr.trailno --산책로번호
         ,tr.name --산책로이름
         ,co.coordorder --좌표순서
