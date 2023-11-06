@@ -10,6 +10,19 @@ SELECT * FROM dog;
 
 
 
+-- 산책로 불러오는 쿼리문 
+SELECT  co.coordno coordno--좌표번호
+        ,tr.trailno --산책로번호
+        ,tr.name --산책로이름
+        ,co.coordorder --좌표순서
+        ,co.lat --위도
+        ,co.lng --경고
+FROM trail tr, coords co
+where co.type = 'trail'
+and tr.trailno = co.useno
+ORDER BY co.coordno asc
+, co.coordorder asc;
+
 -- 산책로 하나 불러오는 쿼리문 
 SELECT  *
 FROM trail tr, coords co
