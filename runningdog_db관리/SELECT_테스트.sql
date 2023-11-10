@@ -39,8 +39,20 @@ and tr.trailno = co.useno
 and co.useno = 3
 ORDER BY co.coordorder asc;
 
--- 회원번호를 통해 회원의 강아지정보 가져오기
-SELECT * 
+-- 회원번호를 통해 회원의 강아지정보 가져오기 (이미지도 가져와야함)
+SELECT  us.userno
+        ,us.name -- 닉네임
+        ,do.dogno
+        ,do.name
+FROM users us,dog do
+where us.userno = 1 
+and us.userno = do.userno;
+
+-- 회원번호를 통해 회원의 강아지정보 가져오기 이미지도!
+SELECT  us.userno
+        ,us.name -- 닉네임
+        ,do.dogno
+        ,do.name
 FROM users us,dog do
 where us.userno = 1 
 and us.userno = do.userno;
