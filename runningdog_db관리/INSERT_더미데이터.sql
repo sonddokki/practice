@@ -48,6 +48,9 @@ INSERT INTO dog
 VALUES (5, 1, '고세구', sysdate, ' female', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
 
 INSERT INTO dog
+VALUES (6, 1, '아이네', sysdate, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
+
+INSERT INTO dog
 VALUES (2, 2, '아이네', sysdate, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
 
 INSERT INTO dog

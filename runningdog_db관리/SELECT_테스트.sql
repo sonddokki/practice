@@ -7,6 +7,7 @@ SELECT * FROM users;
 SELECT * FROM trail;
 SELECT * FROM coords;
 SELECT * FROM dog;
+SELECT * FROM walkLog;
 
 
 
@@ -58,7 +59,11 @@ where us.userno = 1
 and us.userno = do.userno;
 
 
-
-
-
-
+ SELECT  us.userno as userNo 
+		         ,us.name as userName
+		         ,do.dogno as dogNo
+		         ,do.name as dogName
+	     FROM users us,dog do
+	     where us.id = 'aaa'
+	     and us.userno = do.userno;
+         
