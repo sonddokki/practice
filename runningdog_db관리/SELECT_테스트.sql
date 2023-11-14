@@ -67,3 +67,33 @@ and us.userno = do.userno;
 	     where us.id = 'aaa'
 	     and us.userno = do.userno;
          
+
+
+
+
+   <!-- 산책기록 저장하기 -->
+   <insert id="walkLogInsert"  parameterType="com.runningdog.vo.MoWalkLogVo" >
+		<selectKey resultType="int" keyProperty="walkLogNo" order="BEFORE">
+			<![CDATA[
+			SELECT seq_walkdog_no.nextVal FROM dual    
+		]]>
+		</selectKey>
+		<![CDATA[
+		    INSERT INTO walkLog
+			VALUES (16,  
+			        1,
+			        1174010900, 
+			        11111, 
+			        SYSDATE,
+			        '2023-11-14T01:18',
+			        '2023-11-14T01:18',
+			        '00:00:03',
+			        '0',
+			        'aaa',
+			        '공개',
+			        'T'
+			        )
+		   ]]>
+   </insert>
+   
+   

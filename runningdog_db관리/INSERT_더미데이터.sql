@@ -77,12 +77,13 @@ VALUES (99,    -- 회원번호 userNo
 INSERT INTO walkLog
 VALUES (1,    -- 산책일지번호 walkLogNo
         99,     -- 회원번호 userNo
-        111,    -- 동네번호 locationNo
-        11111, -- 모임번호 meetingNo
+        1174010900,    -- 동네번호 locationNo
+        null, -- 모임번호 meetingNo
+        '제목',
         SYSDATE, -- 작성시간 regDate
-        SYSDATE, -- 시작시간 startTime
-        SYSDATE, -- 종료시간 endTime
-        SYSDATE, -- 소요시간 logTime
+        to_date('2023-11-04 03:28','YYYY/MM/DD HH:MI'), -- 시작시간 startTime 2023-11-14T03:28
+        to_date('2023-11-05 03:28','YYYY/MM/DD HH:MI'), -- 종료시간 endTime
+        3560, -- 소요시간 logTime
         15, -- 거리 distance
         '내용을 적어주세요', -- 내용 content
         '공개', -- 공개여부 security
@@ -92,12 +93,13 @@ VALUES (1,    -- 산책일지번호 walkLogNo
 INSERT INTO walkLog
 VALUES (2,    -- 산책일지번호 walkLogNo
         99,     -- 회원번호 userNo
-        111,    -- 동네번호 locationNo
+        1174010900,    -- 동네번호 locationNo
         11111, -- 모임번호 meetingNo
+        '제목',
         SYSDATE, -- 작성시간 regDate
-        SYSDATE, -- 시작시간 startTime
-        SYSDATE, -- 종료시간 endTime
-        SYSDATE, -- 소요시간 logTime
+        to_date('2023-11-04 03:28','YYYY/MM/DD HH:MI'), -- 시작시간 startTime 2023-11-14T03:28
+        to_date('2023-11-05 03:28','YYYY/MM/DD HH:MI'), -- 종료시간 endTime
+        3560, -- 소요시간 logTime
         15, -- 거리 distance
         '내용을 적어주세요', -- 내용 content
         '공개', -- 공개여부 security
@@ -107,12 +109,13 @@ VALUES (2,    -- 산책일지번호 walkLogNo
 INSERT INTO walkLog
 VALUES (3,    -- 산책일지번호 walkLogNo
         99,     -- 회원번호 userNo
-        111,    -- 동네번호 locationNo
+        1174010900,    -- 동네번호 locationNo
         11111, -- 모임번호 meetingNo
+        '제목',
         SYSDATE, -- 작성시간 regDate
-        SYSDATE, -- 시작시간 startTime
-        SYSDATE, -- 종료시간 endTime
-        SYSDATE, -- 소요시간 logTime
+        to_date('2023-11-04 03:28','YYYY/MM/DD HH:MI'), -- 시작시간 startTime 2023-11-14T03:28
+        to_date('2023-11-05 03:28','YYYY/MM/DD HH:MI'), -- 종료시간 endTime
+        3560, -- 소요시간 logTime
         15, -- 거리 distance
         '내용을 적어주세요', -- 내용 content
         '공개', -- 공개여부 security
@@ -209,15 +212,15 @@ INSERT INTO coords (coordNo, coordOrder, type, useNo, lng, lat) VALUES (seq_coor
 --산책로 + 산책좌표 
 INSERT INTO trail
 VALUES (1, 1, 1174010900, '천호공원 한바퀴', '서울 강동구 올림픽로 702 해공도서관',
-'694m', '50분', 'T', 'F', 'F', '저녁에 사람이 많다. 공기가 좋다', sysdate, sysdate, 'T');
+563, 3000, 'T', 'F', 'F', '저녁에 사람이 많다. 공기가 좋다', sysdate, sysdate, 'T');
 
 INSERT INTO trail
 VALUES (2, 2, 1174010900, '광나루한강공원', '서울 강동구 천호동 351-1',
-'164m', '17분', 'F', 'T', 'F', '강아지들과 운동하기 좋음', sysdate, sysdate, 'T');
+563, 3000, 'F', 'T', 'F', '강아지들과 운동하기 좋음', sysdate, sysdate, 'T');
 
 INSERT INTO trail
 VALUES (3, 3, 1174010900, '광나루자전거공원', '서울 강동구 선사로 83-19',
-'563m', '30분', 'F', 'F', 'T', '산책길이 잘 되어 있음', sysdate, sysdate, 'T');
+563, 3000, 'F', 'F', 'T', '산책길이 잘 되어 있음', sysdate, sysdate, 'T');
 
 INSERT INTO trailTag
 VALUES (1, 1, '공원 근처');

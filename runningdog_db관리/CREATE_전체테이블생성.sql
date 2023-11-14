@@ -32,11 +32,12 @@ CREATE TABLE walkLog (
 	userNo	NUMBER	NOT NULL,
 	locationNo	NUMBER	NOT NULL,
 	meetingNo	NUMBER	NULL,
+    title	varchar2(50)  NULL,
 	regDate	date	NOT NULL,
-	startTime	varchar2(50)	NOT NULL,
-	endTime	varchar2(50)	NOT NULL,
-	logTime	varchar2(50)	NOT NULL,
-	distance	varchar2(50)	NOT NULL,
+	startTime	date	NOT NULL,
+	endTime	date	NOT NULL,
+	logTime	NUMBER	NOT NULL,
+	distance	NUMBER	NOT NULL,
 	content	varchar2(2000)	NULL,
 	security	varchar2(10)	NOT NULL,
 	status	char	NOT NULL
@@ -137,20 +138,20 @@ CREATE TABLE walkedDog (
 );
 
 CREATE TABLE trail (
-	trailNo	NUMBER	NOT NULL,
-	userNo	NUMBER	NOT NULL,
-	locationNo	NUMBER	NOT NULL,
-	name	varchar2(50)	NOT NULL,
-	spot	varchar2(500)	NOT NULL,
-	distance	varchar2(20)	NOT NULL,
-	eta	varchar2(20)	NOT NULL,
-	parking	char	NOT NULL,
-	restroom	char	NOT NULL,
-	trashCan	char	NOT NULL,
-	explanation	varchar2(1000)	NULL,
-	regDate	date	NOT NULL,
-	updateDate	date	NULL,
-	status	char	NOT NULL
+    trailNo    NUMBER    NOT NULL,
+    userNo    NUMBER    NOT NULL,
+    locationNo    NUMBER    NOT NULL,
+    name    varchar2(50)    NOT NULL,
+    spot    varchar2(500)    NOT NULL,
+    distance    NUMBER    NOT NULL,
+    eta    NUMBER    NOT NULL,
+    parking    char    NOT NULL,
+    restroom    char    NOT NULL,
+    trashCan    char    NOT NULL,
+    explanation    varchar2(1000)    NULL,
+    regDate    date    NOT NULL,
+    updateDate    date    NULL,
+    status    char    NOT NULL
 );
 
 CREATE TABLE trailUsed (
@@ -186,7 +187,7 @@ CREATE TABLE walkLogCmt (
 	walkLogNo	NUMBER	NOT NULL,
 	userNo	NUMBER	NOT NULL,
 	content	varchar2(1000)	NOT NULL,
-	regDate	NUMBER	NOT NULL,
+	regDate	date	NOT NULL,
 	status	char	NOT NULL
 );
 
