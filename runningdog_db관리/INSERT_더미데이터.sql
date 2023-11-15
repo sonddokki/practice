@@ -57,6 +57,25 @@ INSERT INTO dog
 VALUES (3, 3, '주르르', sysdate, 'male', 8, '도베르만', 'T', '여우 같아요', 'T', '#ffc7ed', 'T');
 
 
+INSERT INTO dog
+VALUES (10, 2, '릴파', sysdate, 'male', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
+
+INSERT INTO dog
+VALUES (11, 2, '고세구', sysdate, ' female', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
+
+INSERT INTO dog
+VALUES (12, 2, '아이네', sysdate, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
+
+INSERT INTO dog
+VALUES (13, 2, '비챤', sysdate, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
+
+INSERT INTO dog
+VALUES (14, 2, '징버거', sysdate, 'male', 8, '도베르만', 'T', '여우 같아요', 'T', '#ffc7ed', 'T');
+
+INSERT INTO dog
+VALUES (15, 2, '주르르', sysdate, 'male', 8, '도베르만', 'T', '여우 같아요', 'T', '#ffc7ed', 'T');
+
+
 
 -----------------------------------------------------------------------
 --산책일지 + 산책좌표

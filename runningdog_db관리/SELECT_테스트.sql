@@ -8,6 +8,7 @@ SELECT * FROM trail;
 SELECT * FROM coords;
 SELECT * FROM dog;
 SELECT * FROM walkLog;
+SELECT * FROM walkedDog;
 
 
 
@@ -96,4 +97,13 @@ and us.userno = do.userno;
 		   ]]>
    </insert>
    
-   
+-----------------------------------------------------
+SELECT tr.trailNo
+       ,tr.name   
+FROM (
+    SELECT  trailNo
+            ,name            
+    FROM trail
+    WHERE locationNo = 1174010900 
+    ORDER BY name) tr
+WHERE ROWNUM <= 3;  
