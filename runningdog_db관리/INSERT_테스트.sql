@@ -1,3 +1,4 @@
+
          
 INSERT INTO walkLog
 VALUES (3,    -- 산책일지번호 walkLogNo

@@ -68,7 +68,14 @@ and us.userno = do.userno;
 	     where us.id = 'aaa'
 	     and us.userno = do.userno;
          
-
+-- 내 산책기록 좌표값 가져오기 (이미지 캡쳐용)
+SELECT  coordorder
+        ,lat
+        ,lng
+FROM coords
+where type = 'walkLog' 
+and useno = 57 
+ORDER BY coordorder asc;
 
 
 
