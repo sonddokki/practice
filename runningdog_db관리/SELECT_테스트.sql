@@ -114,3 +114,16 @@ FROM (
     WHERE locationNo = 1174010900 
     ORDER BY name) tr
 WHERE ROWNUM <= 3;  
+
+
+select  userNo,
+					code
+			from users
+			where id = 'aaa'
+			and password = 1234;
+
+
+select  userNo
+			from users
+			where id = 'aaa'
+			and password = 1234;
