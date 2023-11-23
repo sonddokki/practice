@@ -37,52 +37,139 @@ VALUES (3,    -- 회원번호 usersNo
         'male', -- 성별 gender
         'T' -- 상태 status
         );
+        
+INSERT INTO users
+VALUES (201,    -- 회원번호 usersNo
+        1174010800,    -- 동네번호 locationNo 성내동
+        'a', -- 아이디 id
+        '1', -- 비밀번호 password
+        '이정재', -- 닉네임 name
+        '123', -- 회원코드 code
+        SYSDATE, -- 생일 birth
+        'male', -- 성별 gender
+        'T' -- 상태 status
+        ); 
 
 ---------------------------------------------------------------------------------------------
+-- 테이블의 모든 데이터 삭제
+truncate table 테이블이름A;
+truncate table images;
+truncate table users;
+truncate table dog;
+truncate table coords;
+truncate table walkLog;
+truncate table walkedDog;
+truncate table trail;
+
+-- 컬럼 데이터 타입 변경
+ALTER TABLE dog MODIFY personality VARCHAR2(200);
+ALTER TABLE dog MODIFY birth NUMBER;
 
 --강아지 
 INSERT INTO dog
-VALUES (1, 1, '릴파', sysdate, 'male', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
+VALUES (1, 1, '릴파', 21, 'male', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
 
 INSERT INTO dog
-VALUES (5, 1, '고세구', sysdate, ' female', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
+VALUES (5, 1, '고세구', 2, ' female', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
 
 INSERT INTO dog
-VALUES (6, 1, '아이네', sysdate, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
+VALUES (6, 1, '아이네', 3, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
 
 INSERT INTO dog
-VALUES (2, 2, '아이네', sysdate, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
+VALUES (2, 2, '아이네', 54, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
 
 INSERT INTO dog
-VALUES (3, 3, '주르르', sysdate, 'male', 8, '도베르만', 'T', '여우 같아요', 'T', '#ffc7ed', 'T');
+VALUES (3, 3, '주르르', 32, 'male', 8, '도베르만', 'T', '여우 같아요', 'T', '#ffc7ed', 'T');
 
 
 INSERT INTO dog
-VALUES (10, 2, '릴파', sysdate, 'male', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
+VALUES (10, 2, '릴파', 21, 'male', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
 
 INSERT INTO dog
-VALUES (11, 2, '고세구', sysdate, ' female', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
+VALUES (11, 2, '고세구', 5, ' female', 10.6, '리트리버', 'T', '사람을 만나면 신나요', 'T', '#c7dfff', 'T');
 
 INSERT INTO dog
-VALUES (12, 2, '아이네', sysdate, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
+VALUES (12, 2, '아이네', 6, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
 
 INSERT INTO dog
-VALUES (13, 2, '비챤', sysdate, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
+VALUES (13, 2, '비챤', 7, 'male', 6.2, '푸들', 'T', '노견이라 체력이 약해요', 'T', '#e1c8f7', 'T');
 
 INSERT INTO dog
-VALUES (14, 2, '징버거', sysdate, 'male', 8, '도베르만', 'T', '여우 같아요', 'T', '#ffc7ed', 'T');
+VALUES (14, 2, '징버거', 8, 'male', 8, '도베르만', 'T', '여우 같아요', 'T', '#ffc7ed', 'T');
 
 INSERT INTO dog
-VALUES (15, 2, '주르르', sysdate, 'male', 8, '도베르만', 'T', '여우 같아요', 'T', '#ffc7ed', 'T');
+VALUES (15, 2, '주르르', 35, 'male', 8, '도베르만', 'T', '여우 같아요', 'T', '#ffc7ed', 'T');
 
+-- 강아지 이미지 넣기
+-- 이미지저장 쿼리문
+INSERT INTO images
+VALUES (108,
+        '123.jpg',
+        '릴파',
+        '릴파',
+        0,
+        'dog', -- 타입
+        1,
+        0
+        );
+INSERT INTO images
+VALUES (109,
+        '234.jpg',
+        '릴파',
+        '릴파',
+        0,
+        'dog', -- 타입
+        2,
+        0
+        );     
+        
+INSERT INTO images
+VALUES (110,
+        '345.jpg',
+        '릴파',
+        '릴파',
+        0,
+        'dog', -- 타입
+        3,
+        0
+        );   
+        
+INSERT INTO images
+VALUES (111,        '123.jpg',        '릴파',        '릴파',        0,        'dog',        4,        0        );    
+INSERT INTO images
+VALUES (112,        '234.jpg',        '릴파',        '릴파',        0,        'dog',        5,        0        );        
+INSERT INTO images
+VALUES (113,        '456.jpg',        '릴파',        '릴파',        0,        'dog',        6,        0        );        
+INSERT INTO images
+VALUES (114,        '123.jpg',        '릴파',        '릴파',        0,        'dog',        10,        0        );        
+INSERT INTO images
+VALUES (115,        '123.jpg',        '릴파',        '릴파',        0,        'dog',        11,        0        );          
+INSERT INTO images
+VALUES (116,        '123.jpg',        '릴파',        '릴파',        0,        'dog',        12,        0        );        
+INSERT INTO images
+VALUES (117,        '123.jpg',        '릴파',        '릴파',        0,        'dog',        13,        0        );          
+INSERT INTO images
+VALUES (118,        '123.jpg',        '릴파',        '릴파',        0,        'dog',        14,        0        );        
+INSERT INTO images
+VALUES (119,        '123.jpg',        '릴파',        '릴파',        0,        'dog',        15,        0        );        
 
+select  *
+from images
+where type = 'dog'
+and useNo = 1;
+
+select  *
+from images im, dog do, users us
+where us.userno = 1
+and im.type = 'dog' 
+and do.dogno = im.useno;
 
 -----------------------------------------------------------------------
 --산책일지 + 산책좌표
 
 -- 회원
 INSERT INTO users
-VALUES (99,    -- 회원번호 userNo
+VALUES (999,    -- 회원번호 userNo
         20,     -- 동네 번호 locationNo
         '아이디',  -- 아이디 id
         '1234',  -- 비밀번호 password
@@ -94,8 +181,8 @@ VALUES (99,    -- 회원번호 userNo
 
 -- 산책일지
 INSERT INTO walkLog
-VALUES (1,    -- 산책일지번호 walkLogNo
-        99,     -- 회원번호 userNo
+VALUES (998,    -- 산책일지번호 walkLogNo
+        11,     -- 회원번호 userNo
         1174010900,    -- 동네번호 locationNo
         null, -- 모임번호 meetingNo
         '제목',
@@ -110,8 +197,8 @@ VALUES (1,    -- 산책일지번호 walkLogNo
         ); 
 
 INSERT INTO walkLog
-VALUES (2,    -- 산책일지번호 walkLogNo
-        99,     -- 회원번호 userNo
+VALUES (997,    -- 산책일지번호 walkLogNo
+        11,     -- 회원번호 userNo
         1174010900,    -- 동네번호 locationNo
         11111, -- 모임번호 meetingNo
         '제목',
@@ -127,7 +214,7 @@ VALUES (2,    -- 산책일지번호 walkLogNo
 
 INSERT INTO walkLog
 VALUES (3,    -- 산책일지번호 walkLogNo
-        99,     -- 회원번호 userNo
+        11,     -- 회원번호 userNo
         1174010900,    -- 동네번호 locationNo
         11111, -- 모임번호 meetingNo
         '제목',
@@ -336,4 +423,36 @@ INSERT INTO meetingInfo
 VALUES(seq_meeting_no.nextVal,1,3,3);
 
 --------------------------------------------------------------------------------------------------------------------
+-- 이미지 넣기
+INSERT INTO images
+VALUES(1 ,  'aaa' ,  '도지.png' ,  '1234' ,  30 ,  'walkLogCon',   7 ,  1 );
+INSERT INTO images
+VALUES(1112,   'aaa',  '마루쉐.png',   '1234',   30 , 'walkLogCon' ,  7  , 2 );
+INSERT INTO images
+VALUES(1113,   'aaa' ,  '연탄.png',   '1234' ,  30  , 'walkLogCon'  , 7,   3 );
+INSERT INTO images
+VALUES(1114,   'aaa' ,  '산책로.png' ,  '1234' ,  30 ,  'walkBlog' ,  201 ,  1);
+INSERT INTO images
+VALUES(1115,   '마루.png' ,  '마루.png',   '1234' ,  30   ,'dog',   5 ,  0);
+INSERT INTO images
+VALUES(1116,   '호두.jpg' ,  '호두.jpg' ,  '1234'  , 30   ,'dog' ,  4  , 0);
+INSERT INTO images
+VALUES(1117,   '도지.png' ,  '도지.png'  , '1234' ,  30  , 'dog',   6,   0);
+INSERT INTO images
+VALUES(1118,   '이정재.jpg' ,  '이정재.jpg'  , '1234' ,  30  , 'users'  , 201 ,  0);
+INSERT INTO images
+VALUES(1119,   '연탄.png' ,  '연탄.png' ,  '1234' ,  30 ,  'dog'  , 7 ,  0);
+INSERT INTO images
+VALUES(1110,   'aaa' ,  '산책데이터.png' ,  '1234' ,  30  , 'walkLogMap' ,  7 ,  0);
+INSERT INTO images
+VALUES(1111,   '이효리.jpg' ,  '이효리.jpg' ,  '1234',   30 ,  'users' ,  202 ,  0);
+INSERT INTO images
+VALUES(1122,   '정우성.jpg' ,  '정우성.jpg' ,  '1234'  , 30 ,  'users',   203,   0);
+
+-------------------------------산책로 찜------------------------------------------------
+
+INSERT INTO trailStar
+VALUES(999 ,  14 ,  20 , sysdate );
+
+----- 찜번호, 유저번호,산책로번호,날짜
 

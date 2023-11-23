@@ -1,4 +1,5 @@
 -- 동네
+INSERT INTO location (locationNo, si, gu, dong) VALUES ('1100000000', '서울특별시', '전체', '전체');
 
 INSERT INTO location (locationNo, si, gu, dong) VALUES ('1111010100', '서울특별시', '종로구', '청운동');
 INSERT INTO location (locationNo, si, gu, dong) VALUES ('1111010200', '서울특별시', '종로구', '신교동');
