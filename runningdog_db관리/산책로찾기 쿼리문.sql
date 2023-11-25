@@ -276,7 +276,7 @@ FROM images im, (SELECT  tr.trailno as trailNo
 		ON tr.trailno = tn.trailno
 		LEFT JOIN trailStar ts ON tr.trailno = ts.trailno AND ts.userno = 15        
 		ORDER BY tn.rn ASC) tt
-WHERE im.type ='trailMap'
+WHERE im.type ='trail'
 and im.useno = tt.trailno;
 --------------------------- 이미지 가져오기도 추가 ---------------------------------------------------------
 

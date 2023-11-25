@@ -10,7 +10,9 @@ SELECT * FROM coords;
 SELECT * FROM dog;
 SELECT * FROM friend;
 
-SELECT * FROM walkLog;
+SELECT * FROM walkLog
+WHERE userno = 14
+and status = 'T';
 SELECT * FROM walkedDog;
 SELECT * FROM location;
 

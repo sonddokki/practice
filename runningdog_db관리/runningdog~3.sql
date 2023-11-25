@@ -19,10 +19,15 @@ VALUES (187,    -- 이미지번호
         0 -- 이미지순서
         ); 
         
+UPDATE images
+SET type = 'trail'
+WHERE type = 'trailMap';
+        
+        
 SELECT * FROM coords
 WHERE type = 'trail'
 and useno < 20;
 
 DELETE FROM coords
 WHERE type = 'trail'
-and useno < 20;
+and useno <= 20;

@@ -1,24 +1,36 @@
--- 테이블의 모든 데이터 삭제
-truncate table 테이블이름A;
-truncate table images;
-truncate table users;
-truncate table dog;
-truncate table coords;
-truncate table walkLog;
-truncate table walkedDog;
-truncate table trail;
-
-DELETE FROM coords
-WHERE type = 'walkLog'
-and useno = 12;
+SELECT * FROM meeting;
+-- 미팅의 칼럼 ( 미팅번호, 미팅이름, 모임정보?,모임날짜, 모임시간, 참여최대인원, 소형,중형,대형, 상태, 모임장번호, 산책로번호 ) 
+SELECT * FROM meetinginfo;
+-- 미팅 인포의 칼럼 ( 미팅참여번호, 미팅번호, 강아지주인번호, 참여된강아지번호 )
 
 
 
-UPDATE your_table
-SET
-walkLog = '새로운 A 값',
-column_b = '새로운 B 값';
 
+-- 산책로 검색 ------------------------
+select * FROM trail;
+select * FROM users;
+select * FROM walklog;
+
+select * 
+FROM images im ,trail tr
+where type = 'trail'
+and tr.trailno = im.useno;
+
+
+select  t.trailNo trailNo,
+			        t.name name,
+			        t.spot spot,
+			        t.distance distance,
+			        t.eta eta,
+			        i.saveName saveName
+			from trail t, images i
+			where t.status = 'T'
+			and t.trailNo = i.useNo
+			and i.type = 'trail'
+            and t.name like '%' || trim('') || '%';
+            
+
+--------------------------
 SELECT *
 FROM trail tr, coords co
 where co.type = 'trail'
