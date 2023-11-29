@@ -7,10 +7,47 @@ SELECT * FROM users;
 SELECT * FROM trail;
 SELECT * FROM coords;
 
+UPDATE trail
+   SET name = '삭제된 산책로'
+ WHERE trailNo = 38;
+
 SELECT * FROM dog;
 SELECT * FROM friend;
 
 SELECT * FROM walkLog
+ORDER BY walklogno DESC;
+
+DELETE FROM walkLog
+WHERE walkLogNo = 355
+AND userno = 29; 
+
+SELECT * FROM walklogcmt;
+
+SELECT * FROM blog;
+SELECT * FROM club;
+SELECT * FROM clubboard;
+SELECT * FROM clubjoin;
+
+SELECT * FROM follow;
+SELECT * FROM friend;
+SELECT * FROM images;
+SELECT * FROM location;
+
+SELECT * FROM trail;
+SELECT * FROM trailcmt;
+SELECT * FROM trailstar;
+SELECT * FROM trailtag;
+SELECT * FROM trailused;
+SELECT * FROM userlike;
+SELECT * FROM users;
+
+
+SELECT * FROM walkeddog;
+SELECT * FROM walklog;
+SELECT * FROM walklogcmt;
+
+
+
 WHERE userno = 14
 and status = 'T';
 SELECT * FROM walkedDog;
@@ -289,4 +326,42 @@ FROM
 WHERE 
     WC.walkLogNo = 1
 ORDER BY 
-    WC.walkLogCmtNo ASC
+    WC.walkLogCmtNo ASC;
+    
+---------------------------------
+
+UPDATE images
+SET imageOrder = 1
+WHERE imageno = 512;
+
+SELECT
+    *
+FROM users;
+SELECT
+    *
+FROM trail;
+-------------------- 산책일지 시간변경
+SELECT
+    *
+FROM walkLog wl, trailUsed tu
+where wl.walklogno = tu.walklogno
+and tu.trailNo = 39
+order by wl.walklogno desc;
+
+UPDATE walkLog
+SET regDate = TO_TIMESTAMP('2023-11-05 14:34:00', 'YYYY-MM-DD HH24:MI:SS')
+,title = '우리는 걷는다'
+WHERE walkLogNo = 374;
+
+
+
+SELECT imageno
+       ,orgName
+       ,saveName
+       ,filePath
+       ,imageOrder
+       ,type
+       ,useNo
+  FROM images
+ WHERE type = 'walkLogCon'
+   AND imageOrder = 0;

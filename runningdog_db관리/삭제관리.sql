@@ -8,7 +8,22 @@ truncate table dog;
 truncate table coords;
 truncate table walkLog;
 truncate table walkedDog;
-truncate table trail;
+truncate table meeting;
+truncate table meetingInfo;
+truncate table friend;
+truncate table walklogcmt;
+truncate table club;
+truncate table trailcmt;
+
+
+truncate table trailstar;
+truncate table trailtag;
+truncate table trailused;
+
+
+truncate table trailcmt;
+truncate table trailcmt;
+truncate table trailcmt;
 
 DELETE FROM coords
 WHERE type = 'walkLog'

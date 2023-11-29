@@ -31,3 +31,12 @@ and useno < 20;
 DELETE FROM coords
 WHERE type = 'trail'
 and useno <= 20;
+
+SELECT * FROM trail;
+
+SELECT
+    *
+FROM walkLog wa ,trailused tu
+where wa.walklogno = tu.walklogno
+and tu.trailno = 39
+ORDER BY wa.walkLogNo ASC;
